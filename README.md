@@ -51,7 +51,7 @@ Una vez obtenido el tipo de ruido deseado, lo combiné con la rotación para dis
 
 ![versión 3](images/rotate-ridge.png)
 
-Quise también recrear el efecto del segundo reel, en el que una cuadrícula de círculos cambia de color según el ruido. Para ello incorporé la función `circle` procedente de un ejemplo de The Book of Shaders y discreticé la posición mediante `floor(pos * SCALE) / SCALE`. El código correspondiente está en [`circles-rotate-ridge.glsl`](circles-rotate-ridge.glsl).
+Quise también recrear el efecto del segundo reel, en el que una cuadrícula de círculos cambia de color según el ruido. Para ello incorporé la función `circle` procedente de uno de los [ejemplos dados](https://github.com/otsedom/otsedom.github.io/tree/main/IG/S9#patrones-y-generativos) y discreticé la posición mediante `floor(pos * SCALE) / SCALE`. El código correspondiente está en [`circles-rotate-ridge.glsl`](circles-rotate-ridge.glsl).
 
 ![versión 4](images/circles-rotate-ridge.png)
 
