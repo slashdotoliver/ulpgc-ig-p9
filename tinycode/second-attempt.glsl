@@ -1,0 +1,1 @@
+precision mediump float;uniform vec2 u_resolution;uniform float u_time;float r(vec2 s){return 2.*fract(sin(dot(s,vec2(1,4))));}float f(vec2 s){float v=0.,a=.5;for(int n=0;n<6;n++){float z=r(floor(s));v+=a*abs(z);s*=2.;a*=.5;}return v;}void main(){vec2 p=gl_FragCoord.xy*2./u_resolution.xy-1.;gl_FragColor=vec4(mix(vec3(1,0,5),vec3(0,.5,0),f(p+floor(u_time))),1.);}

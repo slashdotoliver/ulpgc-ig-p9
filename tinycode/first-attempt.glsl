@@ -1,0 +1,5 @@
+precision mediump float;uniform vec2 u_resolution;uniform float u_time;
+#define t u_time
+#define U u_resolution
+#define S sin
+float r(vec2 s){return 2.*fract(S(dot(s,vec2(13,71)))*4E3)-1.;}float f(vec2 s){float v=0.,a=.5;for(int n=0;n<6;n++){vec2 I=floor(s),F=fract(s);float A=r(I),B=r(I+vec2(1.,0.)),C=r(I+vec2(0.,1.)),D=r(I+vec2(1.));vec2 w=F*F*(3.-2.*F);float z=mix(A,B,w.x)+(C-A)*w.y*(1.-w.x)+(D-B)*w.x*w.y;v+=a*abs(z);s*=2.;a*=.5;}return 1.-v;}void main(){vec2 p=2.*gl_FragCoord.xy/U.xy;p.x*=U.x/U.y;vec2 q=floor(p*1E2)/1E2;float a=t*.1;vec2 z=vec2(S(a+1.6)*q.x-S(a)*q.y,S(a)*q.x+S(a+1.6)*q.y);z.x+=1.4*f(z*3.+a);float i=mod(atan(z.x,z.y),1.)-.1;vec3 k=mix(vec3(.2,1.,.3),vec3(1.,.1,.4),i);vec2 y=fract(p*100.)-vec2(.5);float c=smoothstep(.9*i-(.9*i*.01),.9*i,dot(y,y)*4.);gl_FragColor=vec4(mix(k,vec3(.0,0.,.3),c),1.);}
