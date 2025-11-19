@@ -69,13 +69,13 @@ Ajustando diversos parámetros y añadiendo dependencia temporal adicional en la
 
 Una vez completado el shader final, inicié un proceso de reducción del tamaño del código. Entre las técnicas usadas se encuentran: integración directa de funciones empleadas una única vez, simplificación algebraica de expresiones, renombrado de variables a un único carácter, reducción de precisión numérica y uso puntual de notación científica. Además se eliminaron todos los espacios y saltos de línea no esenciales.
 
-El primer intento reducido está en [`tinycode/first-attempt.glsl`](tinycode/first-attempt.glsl) y ocupa 825 bytes, por lo que no alcanzaba el límite inferior de 512 bytes. Para cumplir con ese límite desarrollé un segundo shader alternativo, sin rotación 2D ni generación de círculos, y basado en un ruido simplificado que produce un patrón pixelado animado por bloques en el tiempo. El shader final reducido se encuentra en [`tinycode/second-attempt.glsl`](tinycode/second-attempt.glsl) y ocupa 364 bytes.
+El primer intento reducido está en [`tinycode/first-attempt.glsl`](tinycode/first-attempt.glsl) y ocupa 825 bytes, por lo que no alcanzaba el límite inferior de 512 bytes. Para cumplir con ese límite desarrollé un segundo shader alternativo, sin rotación 2D ni generación de círculos, y basado en un ruido Ridge simplificado que produce un patrón pixelado animado por bloques en el tiempo. El shader final reducido se encuentra en [`tinycode/second-attempt.glsl`](tinycode/second-attempt.glsl) y ocupa 364 bytes.
 
 ![versión tinycode (tinycode/second-attempt.glsl)](images/tinycode.png)
 
 ## Referencias
 
-* gela.js – Reel sobre alternancia de ruido: [https://www.instagram.com/gela.js/reel/DNtj9q80FKW/](https://www.instagram.com/gela.js/reel/DNtj9q80FKW/)
+* gela.js – Reel sobre alternancia de ruido con un barrido: [https://www.instagram.com/gela.js/reel/DNtj9q80FKW/](https://www.instagram.com/gela.js/reel/DNtj9q80FKW/)
 * gela.js – Reel sobre cuadrícula de círculos: [https://www.instagram.com/gela.js/reel/DP1xl7ejDpd/](https://www.instagram.com/gela.js/reel/DP1xl7ejDpd/)
 * The Book of Shaders: [https://thebookofshaders.com](https://thebookofshaders.com)
 * Editor de The Book of Shaders: [https://editor.thebookofshaders.com](https://editor.thebookofshaders.com)
