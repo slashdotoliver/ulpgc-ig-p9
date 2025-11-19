@@ -1,4 +1,4 @@
-# Shaders de fragmentos
+# Shaders de fragmento
 
 <p align="center">
   <img src="images/banner.png" alt="Banner del repo">
