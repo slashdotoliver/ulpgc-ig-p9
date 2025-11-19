@@ -67,7 +67,7 @@ Ajustando diversos parámetros y añadiendo dependencia temporal adicional en la
 
 ### Tiny-Code
 
-Una vez completado el shader final, inicié un proceso de reducción extrema del tamaño del código. Entre las técnicas usadas se encuentran: integración directa de funciones empleadas una única vez, simplificación algebraica de expresiones, renombrado de variables a un único carácter, reducción de precisión numérica y uso puntual de notación científica. Además se eliminaron todos los espacios y saltos de línea no esenciales.
+Una vez completado el shader final, inicié un proceso de reducción del tamaño del código. Entre las técnicas usadas se encuentran: integración directa de funciones empleadas una única vez, simplificación algebraica de expresiones, renombrado de variables a un único carácter, reducción de precisión numérica y uso puntual de notación científica. Además se eliminaron todos los espacios y saltos de línea no esenciales.
 
 El primer intento reducido está en [`tinycode/first-attempt.glsl`](tinycode/first-attempt.glsl) y ocupa 825 bytes, por lo que no alcanzaba el límite inferior de 512 bytes. Para cumplir con ese límite desarrollé un segundo shader alternativo, sin rotación 2D ni generación de círculos, y basado en un ruido simplificado que produce un patrón pixelado animado por bloques en el tiempo. El shader final reducido se encuentra en [`tinycode/second-attempt.glsl`](tinycode/second-attempt.glsl) y ocupa 364 bytes.
 
