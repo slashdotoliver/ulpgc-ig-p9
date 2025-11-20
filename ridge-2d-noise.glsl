@@ -1,6 +1,8 @@
-// https://thebookofshaders.com/13/
+// Author: Oliver Cabrera Volo
 
-// Author @patriciogv - 2015
+// Based on:
+// https://thebookofshaders.com/13/
+// @patriciogv - 2015
 // http://patriciogonzalezvivo.com
 
 #ifdef GL_ES
